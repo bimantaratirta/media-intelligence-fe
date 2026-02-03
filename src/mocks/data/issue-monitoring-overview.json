@@ -1,0 +1,132 @@
+{
+  "stats": {
+    "totalMentions": {
+      "value": 125432,
+      "change": 12.5,
+      "trend": [
+        {"value": 98000},
+        {"value": 105000},
+        {"value": 112000},
+        {"value": 118000},
+        {"value": 122000},
+        {"value": 125432}
+      ]
+    },
+    "reach": {
+      "value": 45200000,
+      "change": 8.3,
+      "trend": [
+        {"value": 38000000},
+        {"value": 40000000},
+        {"value": 42000000},
+        {"value": 43500000},
+        {"value": 44500000},
+        {"value": 45200000}
+      ]
+    },
+    "sentimentScore": {
+      "value": 0.42,
+      "change": -0.15,
+      "trend": [
+        {"value": 0.55},
+        {"value": 0.52},
+        {"value": 0.48},
+        {"value": 0.45},
+        {"value": 0.43},
+        {"value": 0.42}
+      ]
+    },
+    "viralityIndex": {
+      "value": 8.7,
+      "change": 1.2,
+      "trend": [
+        {"value": 6.5},
+        {"value": 7.0},
+        {"value": 7.5},
+        {"value": 8.0},
+        {"value": 8.4},
+        {"value": 8.7}
+      ]
+    }
+  },
+  "mentionTrend": [
+    {"date": "Jan 1", "positive": 3200, "neutral": 2800, "negative": 1500},
+    {"date": "Jan 2", "positive": 3500, "neutral": 3000, "negative": 1200},
+    {"date": "Jan 3", "positive": 2800, "neutral": 2500, "negative": 2100},
+    {"date": "Jan 4", "positive": 4200, "neutral": 3200, "negative": 1800},
+    {"date": "Jan 5", "positive": 3800, "neutral": 2900, "negative": 1400},
+    {"date": "Jan 6", "positive": 3600, "neutral": 3100, "negative": 1600},
+    {"date": "Jan 7", "positive": 4000, "neutral": 3300, "negative": 1500}
+  ],
+  "sentimentBreakdown": {
+    "positive": 45,
+    "neutral": 35,
+    "negative": 20
+  },
+  "platformDistribution": [
+    {"platform": "X/Twitter", "percentage": 45, "count": 56444},
+    {"platform": "Instagram", "percentage": 25, "count": 31358},
+    {"platform": "TikTok", "percentage": 15, "count": 18815},
+    {"platform": "News Portal", "percentage": 10, "count": 12543},
+    {"platform": "Others", "percentage": 5, "count": 6272}
+  ],
+  "topProvinces": [
+    {"id": "JK", "name": "DKI Jakarta", "percentage": 25, "count": 31358},
+    {"id": "JB", "name": "Jawa Barat", "percentage": 18, "count": 22578},
+    {"id": "JI", "name": "Jawa Timur", "percentage": 12, "count": 15052},
+    {"id": "JT", "name": "Jawa Tengah", "percentage": 8, "count": 10035},
+    {"id": "BT", "name": "Banten", "percentage": 5, "count": 6272}
+  ],
+  "insights": [
+    {
+      "id": "1",
+      "type": "observation",
+      "icon": "chart",
+      "message": "Terjadi lonjakan 340% mention negatif pada tanggal 15 Jan, dipicu oleh thread viral dari @username tentang isu layanan pelanggan.",
+      "priority": "high"
+    },
+    {
+      "id": "2",
+      "type": "recommendation",
+      "icon": "lightbulb",
+      "message": "Platform X mendominasi 45% percakapan. Rekomendasi: prioritaskan response di platform ini untuk impact maksimal.",
+      "priority": "medium"
+    },
+    {
+      "id": "3",
+      "type": "trend",
+      "icon": "target",
+      "message": "DKI Jakarta & Jawa Barat menyumbang 43% total mention. Fokus monitoring di kedua wilayah ini.",
+      "priority": "medium"
+    }
+  ],
+  "viralMentions": [
+    {
+      "id": "v1",
+      "platform": "twitter",
+      "author": "@influencer_1",
+      "content": "Review jujur tentang Brand X: Pelayanannya sangat mengecewakan, sudah 3 hari komplain tidak ada respon...",
+      "engagement": {"likes": 12500, "retweets": 4500, "comments": 890},
+      "sentiment": "negative",
+      "createdAt": "2024-01-15T10:30:00Z"
+    },
+    {
+      "id": "v2",
+      "platform": "instagram",
+      "author": "@reviewer_id",
+      "content": "Akhirnya nyobain produk baru dari Brand X, dan hasilnya luar biasa! Worth the hype 🔥",
+      "engagement": {"likes": 8900, "retweets": 0, "comments": 567},
+      "sentiment": "positive",
+      "createdAt": "2024-01-14T15:20:00Z"
+    },
+    {
+      "id": "v3",
+      "platform": "tiktok",
+      "author": "@tiktoker_viral",
+      "content": "POV: Kamu baru tau fakta ini tentang Brand X 😱 #fyp #viral #brandx",
+      "engagement": {"likes": 45000, "retweets": 0, "comments": 2300},
+      "sentiment": "neutral",
+      "createdAt": "2024-01-13T08:00:00Z"
+    }
+  ]
+}

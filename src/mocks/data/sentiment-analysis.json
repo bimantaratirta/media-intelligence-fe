@@ -1,0 +1,76 @@
+{
+  "sentimentScore": {
+    "value": 0.42,
+    "change": -0.15,
+    "previousValue": 0.57
+  },
+  "distribution": {
+    "positive": { "percentage": 45, "count": 56444 },
+    "neutral": { "percentage": 35, "count": 43901 },
+    "negative": { "percentage": 20, "count": 25087 }
+  },
+  "trend": [
+    {"date": "Jan 1", "positive": 48, "neutral": 32, "negative": 20},
+    {"date": "Jan 2", "positive": 45, "neutral": 35, "negative": 20},
+    {"date": "Jan 3", "positive": 42, "neutral": 38, "negative": 20},
+    {"date": "Jan 4", "positive": 50, "neutral": 30, "negative": 20},
+    {"date": "Jan 5", "positive": 46, "neutral": 34, "negative": 20},
+    {"date": "Jan 6", "positive": 44, "neutral": 36, "negative": 20},
+    {"date": "Jan 7", "positive": 45, "neutral": 35, "negative": 20}
+  ],
+  "emotions": {
+    "joy": 14,
+    "anger": 28,
+    "sadness": 18,
+    "fear": 15,
+    "surprise": 12,
+    "disgust": 8,
+    "neutral": 5
+  },
+  "byPlatform": [
+    {"platform": "Twitter", "positive": 40, "neutral": 35, "negative": 25},
+    {"platform": "Instagram", "positive": 55, "neutral": 32, "negative": 13},
+    {"platform": "TikTok", "positive": 48, "neutral": 38, "negative": 14},
+    {"platform": "News", "positive": 30, "neutral": 52, "negative": 18}
+  ],
+  "positiveDrivers": [
+    {"word": "bagus", "count": 234},
+    {"word": "mantap", "count": 189},
+    {"word": "recommended", "count": 145},
+    {"word": "worth it", "count": 134},
+    {"word": "terbaik", "count": 98}
+  ],
+  "negativeDrivers": [
+    {"word": "kecewa", "count": 567},
+    {"word": "mahal", "count": 432},
+    {"word": "lambat", "count": 321},
+    {"word": "mengecewakan", "count": 287},
+    {"word": "buruk", "count": 198}
+  ],
+  "recentMentions": [
+    {
+      "id": "m1",
+      "content": "Produk ini bagus banget, recommended buat semua orang!",
+      "autoSentiment": "positive",
+      "manualSentiment": null,
+      "autoEmotion": "joy",
+      "createdAt": "2024-01-28T10:30:00Z"
+    },
+    {
+      "id": "m2",
+      "content": "Gak worth it sih menurutku, ekspektasi vs realita beda jauh",
+      "autoSentiment": "negative",
+      "manualSentiment": "neutral",
+      "autoEmotion": "sadness",
+      "createdAt": "2024-01-28T09:15:00Z"
+    },
+    {
+      "id": "m3",
+      "content": "Biasa aja, standar lah kayak produk lain",
+      "autoSentiment": "neutral",
+      "manualSentiment": null,
+      "autoEmotion": "neutral",
+      "createdAt": "2024-01-28T08:00:00Z"
+    }
+  ]
+}

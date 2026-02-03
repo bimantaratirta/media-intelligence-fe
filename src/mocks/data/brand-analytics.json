@@ -1,0 +1,114 @@
+{
+  "overview": {
+    "followers": {
+      "value": 1250000,
+      "change": 2.3,
+      "trend": [
+        {"value": 1180000},
+        {"value": 1195000},
+        {"value": 1210000},
+        {"value": 1225000},
+        {"value": 1240000},
+        {"value": 1250000}
+      ]
+    },
+    "reach": {
+      "value": 45200000,
+      "change": 15.4,
+      "trend": [
+        {"value": 38000000},
+        {"value": 40000000},
+        {"value": 42000000},
+        {"value": 44000000},
+        {"value": 45000000},
+        {"value": 45200000}
+      ]
+    },
+    "engagement": {
+      "value": 892000,
+      "change": 8.7,
+      "trend": [
+        {"value": 780000},
+        {"value": 810000},
+        {"value": 845000},
+        {"value": 870000},
+        {"value": 885000},
+        {"value": 892000}
+      ]
+    },
+    "engagementRate": {
+      "value": 4.2,
+      "change": -0.3,
+      "trend": [
+        {"value": 4.5},
+        {"value": 4.4},
+        {"value": 4.3},
+        {"value": 4.2},
+        {"value": 4.1},
+        {"value": 4.2}
+      ]
+    }
+  },
+  "engagementTrend": [
+    {"date": "Jan", "engagement": 120000, "reach": 6500000},
+    {"date": "Feb", "engagement": 145000, "reach": 7200000},
+    {"date": "Mar", "engagement": 132000, "reach": 6800000},
+    {"date": "Apr", "engagement": 168000, "reach": 8100000},
+    {"date": "May", "engagement": 175000, "reach": 8500000},
+    {"date": "Jun", "engagement": 152000, "reach": 8100000}
+  ],
+  "platformBreakdown": [
+    {"name": "Instagram", "value": 45, "color": "#E4405F"},
+    {"name": "TikTok", "value": 30, "color": "#000000"},
+    {"name": "Twitter", "value": 15, "color": "#1DA1F2"},
+    {"name": "YouTube", "value": 8, "color": "#FF0000"},
+    {"name": "Facebook", "value": 2, "color": "#1877F2"}
+  ],
+  "platformPerformance": [
+    {
+      "platform": "Instagram",
+      "followers": 500000,
+      "posts": 45,
+      "reach": 12500000,
+      "engagement": 450000,
+      "engRate": 3.6,
+      "growth": 2.1
+    },
+    {
+      "platform": "TikTok",
+      "followers": 350000,
+      "posts": 32,
+      "reach": 18200000,
+      "engagement": 320000,
+      "engRate": 1.8,
+      "growth": 5.4
+    },
+    {
+      "platform": "Twitter",
+      "followers": 250000,
+      "posts": 120,
+      "reach": 8500000,
+      "engagement": 85000,
+      "engRate": 1.0,
+      "growth": 0.8
+    },
+    {
+      "platform": "YouTube",
+      "followers": 120000,
+      "posts": 8,
+      "reach": 4200000,
+      "engagement": 32000,
+      "engRate": 0.8,
+      "growth": 1.2
+    },
+    {
+      "platform": "Facebook",
+      "followers": 30000,
+      "posts": 25,
+      "reach": 1800000,
+      "engagement": 5000,
+      "engRate": 0.3,
+      "growth": -0.5
+    }
+  ]
+}

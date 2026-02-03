@@ -1,0 +1,276 @@
+{
+  "clusters": [
+    {
+      "id": "critical-negative",
+      "name": "Critical Negative",
+      "description": "High-impact negative mentions requiring immediate attention",
+      "icon": "alert-circle",
+      "color": "red",
+      "count": 127,
+      "newToday": 23
+    },
+    {
+      "id": "urgent-issues",
+      "name": "Urgent Issues",
+      "description": "Complaints and issues that need response",
+      "icon": "alert-triangle",
+      "color": "orange",
+      "count": 89,
+      "newToday": 12
+    },
+    {
+      "id": "viral",
+      "name": "Viral Content",
+      "description": "High engagement posts going viral",
+      "icon": "trending-up",
+      "color": "purple",
+      "count": 34,
+      "newToday": 5
+    },
+    {
+      "id": "bot-suspects",
+      "name": "Bot Suspects",
+      "description": "Potential bot or coordinated activity",
+      "icon": "bot",
+      "color": "slate",
+      "count": 5432,
+      "newToday": 234
+    },
+    {
+      "id": "news",
+      "name": "News Coverage",
+      "description": "Mentions from news portals",
+      "icon": "newspaper",
+      "color": "blue",
+      "count": 56,
+      "newToday": 8
+    },
+    {
+      "id": "influencer",
+      "name": "Influencer Mentions",
+      "description": "Posts from accounts with high followers",
+      "icon": "users",
+      "color": "indigo",
+      "count": 78,
+      "newToday": 15
+    },
+    {
+      "id": "questions",
+      "name": "Questions",
+      "description": "Questions and inquiries from users",
+      "icon": "help-circle",
+      "color": "yellow",
+      "count": 234,
+      "newToday": 45
+    },
+    {
+      "id": "positive",
+      "name": "Positive Feedback",
+      "description": "Positive mentions and testimonials",
+      "icon": "thumbs-up",
+      "color": "green",
+      "count": 892,
+      "newToday": 120
+    },
+    {
+      "id": "unread",
+      "name": "Unread",
+      "description": "All unread mentions",
+      "icon": "clock",
+      "color": "blue",
+      "count": 1234,
+      "newToday": 1234
+    },
+    {
+      "id": "all",
+      "name": "All Mentions",
+      "description": "Complete mention list",
+      "icon": "list",
+      "color": "slate",
+      "count": 45678,
+      "newToday": 1500
+    }
+  ],
+  "mentions": [
+    {
+      "id": "m1",
+      "content": "Produk [BRAND] sangat mengecewakan! Sudah 3x komplain tidak ada respon. Kapok beli lagi! #kecewa #complaint",
+      "platform": "twitter",
+      "author": {
+        "username": "angry_customer",
+        "displayName": "Customer Kecewa",
+        "avatarUrl": null,
+        "followers": 12500,
+        "isVerified": false,
+        "botScore": 0.12
+      },
+      "engagement": {
+        "likes": 567,
+        "comments": 234,
+        "shares": 89,
+        "views": 12500
+      },
+      "sentiment": {
+        "auto": "negative",
+        "autoScore": 0.92,
+        "manual": null
+      },
+      "emotion": {
+        "primary": "anger",
+        "score": 0.85
+      },
+      "location": {
+        "provinceId": "JK",
+        "provinceName": "DKI Jakarta"
+      },
+      "originalUrl": "https://twitter.com/angry_customer/status/123",
+      "createdAt": "2024-01-28T10:30:00Z",
+      "isHandled": false,
+      "isFlagged": false
+    },
+    {
+      "id": "m2",
+      "content": "Review jujur: Saya kecewa dengan [BRAND]. Kualitas menurun drastis dibanding dulu. Tidak akan recommend ke siapa-siapa 😔",
+      "platform": "instagram",
+      "author": {
+        "username": "influencer_x",
+        "displayName": "Influencer X",
+        "avatarUrl": null,
+        "followers": 125000,
+        "isVerified": true,
+        "botScore": 0.05
+      },
+      "engagement": {
+        "likes": 8900,
+        "comments": 1200,
+        "shares": 456,
+        "views": null
+      },
+      "sentiment": {
+        "auto": "negative",
+        "autoScore": 0.88,
+        "manual": null
+      },
+      "emotion": {
+        "primary": "sadness",
+        "score": 0.72
+      },
+      "location": {
+        "provinceId": "JB",
+        "provinceName": "Jawa Barat"
+      },
+      "originalUrl": "https://instagram.com/p/abc123",
+      "createdAt": "2024-01-28T09:15:00Z",
+      "isHandled": false,
+      "isFlagged": true
+    },
+    {
+      "id": "m3",
+      "content": "POV: Kamu baru tau fakta ini tentang [BRAND] 😱 Thread penting nih!",
+      "platform": "tiktok",
+      "author": {
+        "username": "tiktoker_viral",
+        "displayName": "Viral Content Creator",
+        "avatarUrl": null,
+        "followers": 500000,
+        "isVerified": true,
+        "botScore": 0.08
+      },
+      "engagement": {
+        "likes": 45000,
+        "comments": 2300,
+        "shares": 5600,
+        "views": 850000
+      },
+      "sentiment": {
+        "auto": "neutral",
+        "autoScore": 0.15,
+        "manual": null
+      },
+      "emotion": {
+        "primary": "surprise",
+        "score": 0.78
+      },
+      "location": {
+        "provinceId": "JI",
+        "provinceName": "Jawa Timur"
+      },
+      "originalUrl": "https://tiktok.com/@tiktoker_viral/video/123",
+      "createdAt": "2024-01-28T08:00:00Z",
+      "isHandled": true,
+      "isFlagged": false
+    },
+    {
+      "id": "m4",
+      "content": "Terima kasih [BRAND]! Pelayanannya luar biasa, CS-nya ramah dan respon cepat. Highly recommended! 🙌",
+      "platform": "twitter",
+      "author": {
+        "username": "happy_user",
+        "displayName": "Happy User",
+        "avatarUrl": null,
+        "followers": 5600,
+        "isVerified": false,
+        "botScore": 0.15
+      },
+      "engagement": {
+        "likes": 234,
+        "comments": 45,
+        "shares": 12,
+        "views": 3200
+      },
+      "sentiment": {
+        "auto": "positive",
+        "autoScore": 0.95,
+        "manual": null
+      },
+      "emotion": {
+        "primary": "joy",
+        "score": 0.92
+      },
+      "location": {
+        "provinceId": "JT",
+        "provinceName": "Jawa Tengah"
+      },
+      "originalUrl": "https://twitter.com/happy_user/status/456",
+      "createdAt": "2024-01-28T07:30:00Z",
+      "isHandled": false,
+      "isFlagged": false
+    },
+    {
+      "id": "m5",
+      "content": "Ada yang tau cara klaim garansi [BRAND]? Sudah coba hubungi CS tapi belum ada respon",
+      "platform": "facebook",
+      "author": {
+        "username": "question_user",
+        "displayName": "Question User",
+        "avatarUrl": null,
+        "followers": 890,
+        "isVerified": false,
+        "botScore": 0.22
+      },
+      "engagement": {
+        "likes": 45,
+        "comments": 23,
+        "shares": 5,
+        "views": null
+      },
+      "sentiment": {
+        "auto": "neutral",
+        "autoScore": 0.35,
+        "manual": null
+      },
+      "emotion": {
+        "primary": "neutral",
+        "score": 0.65
+      },
+      "location": {
+        "provinceId": "BT",
+        "provinceName": "Banten"
+      },
+      "originalUrl": "https://facebook.com/post/789",
+      "createdAt": "2024-01-28T06:45:00Z",
+      "isHandled": false,
+      "isFlagged": false
+    }
+  ]
+}

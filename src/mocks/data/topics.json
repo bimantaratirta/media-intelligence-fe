@@ -1,0 +1,32 @@
+[
+  {
+    "id": "topic-1",
+    "name": "Brand X Monitoring",
+    "description": "Monitoring percakapan publik tentang Brand X di media sosial",
+    "status": "active",
+    "createdAt": "2024-01-01T00:00:00Z",
+    "updatedAt": "2024-01-28T10:30:00Z",
+    "mentionCount": 125432,
+    "lastCrawledAt": "2024-01-28T10:30:00Z"
+  },
+  {
+    "id": "topic-2",
+    "name": "Campaign Y Launch 2024",
+    "description": "Tracking campaign launch dan response publik",
+    "status": "active",
+    "createdAt": "2024-01-15T00:00:00Z",
+    "updatedAt": "2024-01-28T09:00:00Z",
+    "mentionCount": 45231,
+    "lastCrawledAt": "2024-01-28T09:00:00Z"
+  },
+  {
+    "id": "topic-3",
+    "name": "Competitor Z Analysis",
+    "description": "Analisis kompetitor untuk strategic planning",
+    "status": "paused",
+    "createdAt": "2024-01-10T00:00:00Z",
+    "updatedAt": "2024-01-26T00:00:00Z",
+    "mentionCount": 12543,
+    "lastCrawledAt": "2024-01-26T00:00:00Z"
+  }
+]

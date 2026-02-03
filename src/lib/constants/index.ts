@@ -1,0 +1,62 @@
+export const PLATFORMS = [
+    { id: 'twitter', name: 'X/Twitter', icon: 'twitter' },
+    { id: 'instagram', name: 'Instagram', icon: 'instagram' },
+    { id: 'tiktok', name: 'TikTok', icon: 'music' },
+    { id: 'youtube', name: 'YouTube', icon: 'youtube' },
+    { id: 'facebook', name: 'Facebook', icon: 'facebook' },
+    { id: 'threads', name: 'Threads', icon: 'at-sign' },
+    { id: 'news', name: 'News Portal', icon: 'newspaper' },
+] as const
+
+export const SENTIMENTS = [
+    { id: 'positive', name: 'Positive', color: 'green' },
+    { id: 'neutral', name: 'Neutral', color: 'slate' },
+    { id: 'negative', name: 'Negative', color: 'red' },
+] as const
+
+export const EMOTIONS = [
+    { id: 'joy', name: 'Joy', icon: '😊', color: '#22C55E' },
+    { id: 'anger', name: 'Anger', icon: '😠', color: '#EF4444' },
+    { id: 'sadness', name: 'Sadness', icon: '😢', color: '#3B82F6' },
+    { id: 'fear', name: 'Fear', icon: '😨', color: '#8B5CF6' },
+    { id: 'surprise', name: 'Surprise', icon: '😲', color: '#F59E0B' },
+    { id: 'disgust', name: 'Disgust', icon: '🤢', color: '#78350F' },
+    { id: 'neutral', name: 'Neutral', icon: '😐', color: '#64748B' },
+] as const
+
+export const PROVINCES = [
+    { id: 'AC', name: 'Aceh' },
+    { id: 'SU', name: 'Sumatera Utara' },
+    { id: 'SB', name: 'Sumatera Barat' },
+    { id: 'RI', name: 'Riau' },
+    { id: 'JA', name: 'Jambi' },
+    { id: 'SS', name: 'Sumatera Selatan' },
+    { id: 'BE', name: 'Bengkulu' },
+    { id: 'LA', name: 'Lampung' },
+    { id: 'BB', name: 'Kepulauan Bangka Belitung' },
+    { id: 'KR', name: 'Kepulauan Riau' },
+    { id: 'JK', name: 'DKI Jakarta' },
+    { id: 'JB', name: 'Jawa Barat' },
+    { id: 'JT', name: 'Jawa Tengah' },
+    { id: 'YO', name: 'DI Yogyakarta' },
+    { id: 'JI', name: 'Jawa Timur' },
+    { id: 'BT', name: 'Banten' },
+    { id: 'BA', name: 'Bali' },
+    { id: 'NB', name: 'Nusa Tenggara Barat' },
+    { id: 'NT', name: 'Nusa Tenggara Timur' },
+    { id: 'KB', name: 'Kalimantan Barat' },
+    { id: 'KT', name: 'Kalimantan Tengah' },
+    { id: 'KS', name: 'Kalimantan Selatan' },
+    { id: 'KI', name: 'Kalimantan Timur' },
+    { id: 'KU', name: 'Kalimantan Utara' },
+    { id: 'SA', name: 'Sulawesi Utara' },
+    { id: 'ST', name: 'Sulawesi Tengah' },
+    { id: 'SN', name: 'Sulawesi Selatan' },
+    { id: 'SG', name: 'Sulawesi Tenggara' },
+    { id: 'GO', name: 'Gorontalo' },
+    { id: 'SR', name: 'Sulawesi Barat' },
+    { id: 'MA', name: 'Maluku' },
+    { id: 'MU', name: 'Maluku Utara' },
+    { id: 'PB', name: 'Papua Barat' },
+    { id: 'PA', name: 'Papua' },
+] as const
