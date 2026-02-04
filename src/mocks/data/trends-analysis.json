@@ -1,0 +1,99 @@
+{
+  "mainTrend": [
+    {"date": "2024-01-15 00:00", "total": 1200, "positive": 540, "neutral": 420, "negative": 240},
+    {"date": "2024-01-15 01:00", "total": 800, "positive": 360, "neutral": 280, "negative": 160},
+    {"date": "2024-01-15 02:00", "total": 450, "positive": 200, "neutral": 160, "negative": 90},
+    {"date": "2024-01-15 03:00", "total": 320, "positive": 145, "neutral": 110, "negative": 65},
+    {"date": "2024-01-15 04:00", "total": 280, "positive": 125, "neutral": 100, "negative": 55},
+    {"date": "2024-01-15 05:00", "total": 450, "positive": 200, "neutral": 160, "negative": 90},
+    {"date": "2024-01-15 06:00", "total": 890, "positive": 400, "neutral": 310, "negative": 180},
+    {"date": "2024-01-15 07:00", "total": 1560, "positive": 700, "neutral": 545, "negative": 315},
+    {"date": "2024-01-15 08:00", "total": 2340, "positive": 1050, "neutral": 820, "negative": 470},
+    {"date": "2024-01-15 09:00", "total": 3200, "positive": 1440, "neutral": 1120, "negative": 640},
+    {"date": "2024-01-15 10:00", "total": 12432, "positive": 2500, "neutral": 3000, "negative": 6932, "isSpike": true},
+    {"date": "2024-01-15 11:00", "total": 8500, "positive": 1700, "neutral": 2550, "negative": 4250},
+    {"date": "2024-01-15 12:00", "total": 5600, "positive": 1680, "neutral": 1960, "negative": 1960},
+    {"date": "2024-01-15 13:00", "total": 4200, "positive": 1470, "neutral": 1470, "negative": 1260},
+    {"date": "2024-01-15 14:00", "total": 3800, "positive": 1330, "neutral": 1330, "negative": 1140},
+    {"date": "2024-01-15 15:00", "total": 3500, "positive": 1225, "neutral": 1225, "negative": 1050},
+    {"date": "2024-01-15 16:00", "total": 3200, "positive": 1120, "neutral": 1120, "negative": 960},
+    {"date": "2024-01-15 17:00", "total": 3600, "positive": 1260, "neutral": 1260, "negative": 1080},
+    {"date": "2024-01-15 18:00", "total": 4100, "positive": 1435, "neutral": 1435, "negative": 1230},
+    {"date": "2024-01-15 19:00", "total": 4800, "positive": 1680, "neutral": 1680, "negative": 1440},
+    {"date": "2024-01-15 20:00", "total": 5200, "positive": 1820, "neutral": 1820, "negative": 1560},
+    {"date": "2024-01-15 21:00", "total": 4600, "positive": 1610, "neutral": 1610, "negative": 1380},
+    {"date": "2024-01-15 22:00", "total": 3400, "positive": 1190, "neutral": 1190, "negative": 1020},
+    {"date": "2024-01-15 23:00", "total": 2100, "positive": 735, "neutral": 735, "negative": 630}
+  ],
+  "byPlatform": [
+    {"date": "2024-01-15", "twitter": 4500, "instagram": 2800, "tiktok": 1500, "news": 800, "others": 400},
+    {"date": "2024-01-16", "twitter": 3800, "instagram": 2400, "tiktok": 1200, "news": 600, "others": 350},
+    {"date": "2024-01-17", "twitter": 4200, "instagram": 2600, "tiktok": 1400, "news": 750, "others": 380},
+    {"date": "2024-01-18", "twitter": 2200, "instagram": 1600, "tiktok": 900, "news": 450, "others": 250},
+    {"date": "2024-01-19", "twitter": 2000, "instagram": 1400, "tiktok": 800, "news": 400, "others": 220},
+    {"date": "2024-01-20", "twitter": 2400, "instagram": 1700, "tiktok": 950, "news": 480, "others": 270},
+    {"date": "2024-01-21", "twitter": 3200, "instagram": 2100, "tiktok": 1100, "news": 550, "others": 320},
+    {"date": "2024-01-22", "twitter": 5800, "instagram": 3200, "tiktok": 1800, "news": 1200, "others": 500}
+  ],
+  "anomalies": [
+    {
+      "id": "a1",
+      "datetime": "2024-01-15T10:00:00Z",
+      "type": "spike",
+      "change": 340,
+      "trigger": "Viral thread",
+      "mentions": 12432,
+      "avgMentions": 2820,
+      "rootCause": {
+        "type": "viral_post",
+        "author": "@influencer_mega",
+        "content": "Thread panjang tentang pengalaman buruk dengan Brand X. Saya sudah jadi customer setia selama 5 tahun tapi pelayanan mereka semakin menurun...",
+        "url": "https://twitter.com/influencer_mega/status/123",
+        "engagement": {"likes": 45000, "retweets": 12000, "replies": 3400}
+      },
+      "topKeywords": ["kecewa", "buruk", "complaint", "#brandxfail"],
+      "relatedMentionCount": 234
+    },
+    {
+      "id": "a2",
+      "datetime": "2024-01-22T14:00:00Z",
+      "type": "spike",
+      "change": 180,
+      "trigger": "News coverage",
+      "mentions": 6500,
+      "avgMentions": 2320,
+      "rootCause": {
+        "type": "news",
+        "author": "Detik.com",
+        "content": "Brand X dilaporkan mengalami masalah produksi yang menyebabkan keterlambatan pengiriman ke konsumen...",
+        "url": "https://detik.com/news/123"
+      },
+      "topKeywords": ["berita", "masalah", "produksi", "keterlambatan"],
+      "relatedMentionCount": 156
+    },
+    {
+      "id": "a3",
+      "datetime": "2024-01-18T08:00:00Z",
+      "type": "dip",
+      "change": -45,
+      "trigger": "Weekend effect",
+      "mentions": 1550,
+      "avgMentions": 2820,
+      "note": "Normal weekend activity drop - activity typically decreases 40-50% on weekends"
+    }
+  ],
+  "heatmapData": [
+    {"day": "Mon", "hours": [120, 85, 45, 32, 28, 65, 180, 320, 450, 520, 580, 620, 650, 680, 720, 750, 800, 850, 920, 880, 750, 620, 450, 280]},
+    {"day": "Tue", "hours": [150, 95, 52, 38, 32, 72, 195, 350, 480, 550, 620, 680, 720, 750, 800, 850, 920, 980, 1050, 980, 820, 680, 520, 320]},
+    {"day": "Wed", "hours": [140, 90, 48, 35, 30, 68, 185, 340, 465, 535, 600, 660, 700, 730, 780, 830, 900, 950, 1020, 950, 800, 660, 500, 300]},
+    {"day": "Thu", "hours": [135, 88, 46, 34, 29, 66, 180, 330, 455, 525, 590, 650, 690, 720, 770, 820, 890, 940, 1000, 940, 790, 650, 490, 295]},
+    {"day": "Fri", "hours": [145, 92, 50, 36, 31, 70, 190, 345, 470, 540, 610, 670, 710, 740, 790, 840, 910, 960, 1030, 960, 810, 670, 510, 310]},
+    {"day": "Sat", "hours": [180, 120, 75, 55, 45, 65, 120, 220, 350, 420, 480, 520, 550, 580, 620, 680, 750, 820, 880, 820, 700, 580, 420, 280]},
+    {"day": "Sun", "hours": [160, 110, 68, 48, 40, 58, 105, 195, 320, 390, 450, 490, 520, 550, 590, 650, 720, 790, 850, 790, 680, 560, 400, 260]}
+  ],
+  "peakActivity": {
+    "days": ["Tuesday", "Wednesday"],
+    "hours": ["19:00", "20:00", "21:00"],
+    "insight": "Aktivitas tertinggi terjadi pada hari kerja malam (Selasa-Rabu, 19:00-21:00). Pertimbangkan untuk menjadwalkan monitoring intensif pada jam-jam tersebut."
+  }
+}

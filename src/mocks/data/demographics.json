@@ -1,0 +1,157 @@
+{
+  "genderDistribution": {
+    "male": {
+      "count": 42000,
+      "percentage": 42,
+      "sentiment": {
+        "positive": 45,
+        "neutral": 35,
+        "negative": 20
+      }
+    },
+    "female": {
+      "count": 58000,
+      "percentage": 58,
+      "sentiment": {
+        "positive": 52,
+        "neutral": 30,
+        "negative": 18
+      }
+    },
+    "unknown": {
+      "count": 12000,
+      "percentage": 12
+    }
+  },
+  "ageDistribution": [
+    {
+      "group": "13-17",
+      "label": "Gen Alpha/Z",
+      "count": 8000,
+      "percentage": 8,
+      "sentiment": { "positive": 55, "neutral": 27, "negative": 18 }
+    },
+    {
+      "group": "18-24",
+      "label": "Gen Z",
+      "count": 32000,
+      "percentage": 32,
+      "sentiment": { "positive": 52, "neutral": 30, "negative": 18 }
+    },
+    {
+      "group": "25-34",
+      "label": "Millennial",
+      "count": 38000,
+      "percentage": 38,
+      "sentiment": { "positive": 48, "neutral": 32, "negative": 20 }
+    },
+    {
+      "group": "35-44",
+      "label": "Gen X",
+      "count": 15000,
+      "percentage": 15,
+      "sentiment": { "positive": 42, "neutral": 33, "negative": 25 }
+    },
+    {
+      "group": "45-54",
+      "label": "Gen X/Boomer",
+      "count": 5000,
+      "percentage": 5,
+      "sentiment": { "positive": 38, "neutral": 32, "negative": 30 }
+    },
+    {
+      "group": "55+",
+      "label": "Boomer",
+      "count": 2000,
+      "percentage": 2,
+      "sentiment": { "positive": 35, "neutral": 30, "negative": 35 }
+    }
+  ],
+  "platformDemographics": [
+    {
+      "platform": "tiktok",
+      "platformName": "TikTok",
+      "gender": { "male": 22, "female": 78 },
+      "ageGroups": { "13-17": 15, "18-24": 45, "25-34": 25, "35-44": 10, "45-54": 4, "55+": 1 },
+      "dominantDemo": "Female 18-24",
+      "totalMentions": 15420
+    },
+    {
+      "platform": "twitter",
+      "platformName": "X/Twitter",
+      "gender": { "male": 62, "female": 38 },
+      "ageGroups": { "13-17": 5, "18-24": 20, "25-34": 35, "35-44": 25, "45-54": 10, "55+": 5 },
+      "dominantDemo": "Male 25-34",
+      "totalMentions": 45200
+    },
+    {
+      "platform": "instagram",
+      "platformName": "Instagram",
+      "gender": { "male": 35, "female": 65 },
+      "ageGroups": { "13-17": 10, "18-24": 35, "25-34": 30, "35-44": 15, "45-54": 7, "55+": 3 },
+      "dominantDemo": "Female 18-34",
+      "totalMentions": 25100
+    },
+    {
+      "platform": "facebook",
+      "platformName": "Facebook",
+      "gender": { "male": 45, "female": 55 },
+      "ageGroups": { "13-17": 2, "18-24": 8, "25-34": 20, "35-44": 30, "45-54": 25, "55+": 15 },
+      "dominantDemo": "Female 35-44",
+      "totalMentions": 12300
+    },
+    {
+      "platform": "youtube",
+      "platformName": "YouTube",
+      "gender": { "male": 55, "female": 45 },
+      "ageGroups": { "13-17": 8, "18-24": 25, "25-34": 30, "35-44": 22, "45-54": 10, "55+": 5 },
+      "dominantDemo": "Male 25-34",
+      "totalMentions": 8700
+    },
+    {
+      "platform": "news",
+      "platformName": "News Portal",
+      "gender": { "male": 58, "female": 42 },
+      "ageGroups": { "13-17": 2, "18-24": 10, "25-34": 25, "35-44": 30, "45-54": 20, "55+": 13 },
+      "dominantDemo": "Male 35-44",
+      "totalMentions": 5600
+    }
+  ],
+  "confidenceMetrics": {
+    "genderAccuracy": 78,
+    "ageAccuracy": 65,
+    "undetectableProfiles": 12,
+    "totalProfilesAnalyzed": 112000,
+    "lastUpdated": "2024-01-30T10:30:00Z"
+  },
+  "insights": [
+    {
+      "id": "1",
+      "type": "observation",
+      "icon": "chart",
+      "message": "Audience didominasi oleh perempuan (58%) dengan kelompok usia 25-34 tahun sebagai mayoritas (38%)",
+      "priority": "medium"
+    },
+    {
+      "id": "2",
+      "type": "trend",
+      "icon": "trend",
+      "message": "Female audience menunjukkan sentiment lebih positif (+7% dibanding male audience)",
+      "priority": "medium"
+    },
+    {
+      "id": "3",
+      "type": "observation",
+      "icon": "target",
+      "message": "Generasi 45+ cenderung lebih kritis dengan 35% sentiment negatif dibanding Gen Z (18%)",
+      "priority": "high"
+    },
+    {
+      "id": "4",
+      "type": "recommendation",
+      "icon": "lightbulb",
+      "message": "TikTok ideal untuk target female 18-34, sementara Twitter lebih efektif untuk male 25-44",
+      "priority": "high"
+    }
+  ]
+}

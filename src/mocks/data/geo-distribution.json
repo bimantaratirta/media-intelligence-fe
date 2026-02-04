@@ -1,0 +1,59 @@
+{
+  "provinces": [
+    {"id": "id-jk", "name": "DKI Jakarta", "mentions": 25432, "positive": 62, "neutral": 20, "negative": 18, "reach": 12500000, "engagement": 4.2, "change": 15},
+    {"id": "id-jr", "name": "Jawa Barat", "mentions": 18765, "positive": 45, "neutral": 23, "negative": 32, "reach": 8500000, "engagement": 3.8, "change": 12},
+    {"id": "id-ji", "name": "Jawa Timur", "mentions": 12543, "positive": 55, "neutral": 23, "negative": 22, "reach": 6200000, "engagement": 3.5, "change": 8},
+    {"id": "id-jt", "name": "Jawa Tengah", "mentions": 10035, "positive": 50, "neutral": 28, "negative": 22, "reach": 5100000, "engagement": 3.2, "change": 5},
+    {"id": "id-bt", "name": "Banten", "mentions": 6272, "positive": 48, "neutral": 30, "negative": 22, "reach": 3200000, "engagement": 3.0, "change": 10},
+    {"id": "id-su", "name": "Sumatera Utara", "mentions": 5432, "positive": 38, "neutral": 20, "negative": 42, "reach": 2800000, "engagement": 2.8, "change": -5},
+    {"id": "id-sl", "name": "Sumatera Selatan", "mentions": 4321, "positive": 52, "neutral": 25, "negative": 23, "reach": 2200000, "engagement": 2.5, "change": 18},
+    {"id": "id-ri", "name": "Riau", "mentions": 3654, "positive": 55, "neutral": 28, "negative": 17, "reach": 1900000, "engagement": 2.3, "change": 22},
+    {"id": "id-ki", "name": "Kalimantan Timur", "mentions": 3210, "positive": 60, "neutral": 25, "negative": 15, "reach": 1700000, "engagement": 2.6, "change": 45},
+    {"id": "id-ba", "name": "Bali", "mentions": 2987, "positive": 65, "neutral": 22, "negative": 13, "reach": 1500000, "engagement": 3.5, "change": 8},
+    {"id": "id-se", "name": "Sulawesi Selatan", "mentions": 2654, "positive": 50, "neutral": 30, "negative": 20, "reach": 1400000, "engagement": 2.4, "change": 12},
+    {"id": "id-yo", "name": "DI Yogyakarta", "mentions": 2432, "positive": 58, "neutral": 27, "negative": 15, "reach": 1200000, "engagement": 3.8, "change": 6},
+    {"id": "id-sb", "name": "Sumatera Barat", "mentions": 2100, "positive": 52, "neutral": 30, "negative": 18, "reach": 1100000, "engagement": 2.2, "change": 10},
+    {"id": "id-1024", "name": "Lampung", "mentions": 1850, "positive": 48, "neutral": 32, "negative": 20, "reach": 950000, "engagement": 2.0, "change": 5},
+    {"id": "id-kb", "name": "Kalimantan Barat", "mentions": 1620, "positive": 54, "neutral": 28, "negative": 18, "reach": 850000, "engagement": 2.1, "change": 15},
+    {"id": "id-ks", "name": "Kalimantan Selatan", "mentions": 1450, "positive": 56, "neutral": 26, "negative": 18, "reach": 780000, "engagement": 2.3, "change": 12},
+    {"id": "id-nt", "name": "Nusa Tenggara Timur", "mentions": 1200, "positive": 45, "neutral": 35, "negative": 20, "reach": 620000, "engagement": 1.8, "change": 8},
+    {"id": "id-nb", "name": "Nusa Tenggara Barat", "mentions": 1150, "positive": 50, "neutral": 32, "negative": 18, "reach": 600000, "engagement": 2.0, "change": 10},
+    {"id": "id-sw", "name": "Sulawesi Utara", "mentions": 980, "positive": 58, "neutral": 25, "negative": 17, "reach": 520000, "engagement": 2.4, "change": 18},
+    {"id": "id-sg", "name": "Sulawesi Tenggara", "mentions": 850, "positive": 52, "neutral": 30, "negative": 18, "reach": 450000, "engagement": 2.1, "change": 6},
+    {"id": "id-ac", "name": "Aceh", "mentions": 780, "positive": 48, "neutral": 32, "negative": 20, "reach": 420000, "engagement": 1.9, "change": 3},
+    {"id": "id-be", "name": "Bengkulu", "mentions": 520, "positive": 55, "neutral": 28, "negative": 17, "reach": 280000, "engagement": 1.7, "change": 8},
+    {"id": "id-ja", "name": "Jambi", "mentions": 680, "positive": 50, "neutral": 30, "negative": 20, "reach": 360000, "engagement": 1.8, "change": 5},
+    {"id": "id-kt", "name": "Kalimantan Tengah", "mentions": 720, "positive": 52, "neutral": 28, "negative": 20, "reach": 380000, "engagement": 1.9, "change": 12},
+    {"id": "id-st", "name": "Sulawesi Tengah", "mentions": 650, "positive": 50, "neutral": 32, "negative": 18, "reach": 340000, "engagement": 1.8, "change": 7},
+    {"id": "id-go", "name": "Gorontalo", "mentions": 420, "positive": 55, "neutral": 28, "negative": 17, "reach": 220000, "engagement": 2.0, "change": 10},
+    {"id": "id-pa", "name": "Papua", "mentions": 580, "positive": 45, "neutral": 35, "negative": 20, "reach": 300000, "engagement": 1.6, "change": 4},
+    {"id": "id-ib", "name": "Papua Barat", "mentions": 380, "positive": 48, "neutral": 32, "negative": 20, "reach": 200000, "engagement": 1.5, "change": 6},
+    {"id": "id-ma", "name": "Maluku", "mentions": 450, "positive": 50, "neutral": 30, "negative": 20, "reach": 240000, "engagement": 1.7, "change": 5},
+    {"id": "id-la", "name": "Maluku Utara", "mentions": 320, "positive": 52, "neutral": 30, "negative": 18, "reach": 170000, "engagement": 1.6, "change": 8},
+    {"id": "id-bb", "name": "Bangka Belitung", "mentions": 480, "positive": 55, "neutral": 28, "negative": 17, "reach": 250000, "engagement": 2.1, "change": 12},
+    {"id": "id-kr", "name": "Kepulauan Riau", "mentions": 920, "positive": 58, "neutral": 25, "negative": 17, "reach": 480000, "engagement": 2.5, "change": 15},
+    {"id": "id-sr", "name": "Sulawesi Barat", "mentions": 280, "positive": 50, "neutral": 32, "negative": 18, "reach": 150000, "engagement": 1.5, "change": 4},
+    {"id": "id-ku", "name": "Kalimantan Utara", "mentions": 350, "positive": 54, "neutral": 28, "negative": 18, "reach": 185000, "engagement": 1.8, "change": 20}
+  ],
+  "insights": [
+    {"id": "i1", "type": "observation", "icon": "target", "message": "Pulau Jawa (DKI + Jabar + Jatim + Jateng + Banten) menyumbang 72% total percakapan nasional", "priority": "medium"},
+    {"id": "i2", "type": "warning", "icon": "warning", "message": "Sentiment negatif tertinggi di Sumatera Utara (42%), didorong oleh isu distribusi produk", "priority": "high"},
+    {"id": "i3", "type": "trend", "icon": "trend", "message": "Kalimantan Timur menunjukkan growth 45% MoM, perlu perhatian khusus untuk ekspansi market", "priority": "medium"}
+  ],
+  "provinceDetail": {
+    "trend": [
+      {"date": "Jan 22", "mentions": 3200},
+      {"date": "Jan 23", "mentions": 3500},
+      {"date": "Jan 24", "mentions": 3100},
+      {"date": "Jan 25", "mentions": 3800},
+      {"date": "Jan 26", "mentions": 4200},
+      {"date": "Jan 27", "mentions": 3900},
+      {"date": "Jan 28", "mentions": 3732}
+    ],
+    "topKeywords": ["brand", "produk", "layanan", "harga", "kualitas"],
+    "topInfluencers": [
+      {"username": "@jktinfo", "mentions": 45, "followers": 250000},
+      {"username": "@jakartakita", "mentions": 32, "followers": 180000}
+    ]
+  }
+}

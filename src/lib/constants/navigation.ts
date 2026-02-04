@@ -88,8 +88,8 @@ export const sidebarNavigation = [
                 icon: Target,
             },
             {
-                title: 'Content Perf',
-                href: '/brand-analytics/content-perf',
+                title: 'Content Performance',
+                href: '/brand-analytics/content',
                 icon: FileBarChart,
             },
         ],
