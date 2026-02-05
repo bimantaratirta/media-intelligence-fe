@@ -13,7 +13,7 @@ export const mockApiKeys: ApiKey[] = [
   {
     id: "key1",
     name: "Production",
-    keyPrefix: "n4p_sk_***...abc",
+    keyPrefix: "asha_sk_***...abc",
     permissions: ["read", "write"],
     createdAt: "2024-01-01T00:00:00Z",
     lastUsedAt: "2024-01-30T14:30:00Z",
@@ -21,7 +21,7 @@ export const mockApiKeys: ApiKey[] = [
   {
     id: "key2",
     name: "Development",
-    keyPrefix: "n4p_sk_***...xyz",
+    keyPrefix: "asha_sk_***...xyz",
     permissions: ["read"],
     createdAt: "2024-01-05T00:00:00Z",
     lastUsedAt: "2024-01-28T10:15:00Z",
@@ -29,7 +29,7 @@ export const mockApiKeys: ApiKey[] = [
   {
     id: "key3",
     name: "Analytics Export",
-    keyPrefix: "n4p_sk_***...def",
+    keyPrefix: "asha_sk_***...def",
     permissions: ["read", "export"],
     createdAt: "2024-01-15T00:00:00Z",
   },

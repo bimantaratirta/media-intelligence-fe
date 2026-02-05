@@ -6,14 +6,7 @@ import { Button } from "@/components/ui/button";
 import { Badge } from "@/components/ui/badge";
 import { Input } from "@/components/ui/input";
 import { Label } from "@/components/ui/label";
-import {
-  Table,
-  TableBody,
-  TableCell,
-  TableHead,
-  TableHeader,
-  TableRow,
-} from "@/components/ui/table";
+import { Table, TableBody, TableCell, TableHead, TableHeader, TableRow } from "@/components/ui/table";
 import {
   Dialog,
   DialogContent,
@@ -35,15 +28,7 @@ import {
   AlertDialogTrigger,
 } from "@/components/ui/alert-dialog";
 import { Checkbox } from "@/components/ui/checkbox";
-import {
-  Key,
-  Plus,
-  Copy,
-  Trash2,
-  Eye,
-  EyeOff,
-  AlertTriangle,
-} from "lucide-react";
+import { Key, Plus, Copy, Trash2, Eye, EyeOff, AlertTriangle } from "lucide-react";
 import type { ApiKey } from "@/mocks/data/api-keys";
 
 interface ApiKeysTableProps {
@@ -53,17 +38,10 @@ interface ApiKeysTableProps {
   onCopy: (keyPrefix: string) => void;
 }
 
-export function ApiKeysTable({
-  keys,
-  onGenerate,
-  onRevoke,
-  onCopy,
-}: ApiKeysTableProps) {
+export function ApiKeysTable({ keys, onGenerate, onRevoke, onCopy }: ApiKeysTableProps) {
   const [isGenerateOpen, setIsGenerateOpen] = useState(false);
   const [newKeyName, setNewKeyName] = useState("");
-  const [newKeyPermissions, setNewKeyPermissions] = useState<string[]>([
-    "read",
-  ]);
+  const [newKeyPermissions, setNewKeyPermissions] = useState<string[]>(["read"]);
   const [generatedKey, setGeneratedKey] = useState<string | null>(null);
   const [showKey, setShowKey] = useState(false);
   const [isGenerating, setIsGenerating] = useState(false);
@@ -113,9 +91,7 @@ export function ApiKeysTable({
           <DialogContent>
             <DialogHeader>
               <DialogTitle>Generate API Key</DialogTitle>
-              <DialogDescription>
-                Create a new API key for accessing the N4P API.
-              </DialogDescription>
+              <DialogDescription>Create a new API key for accessing the Asha API.</DialogDescription>
             </DialogHeader>
 
             {!generatedKey ? (
@@ -155,22 +131,15 @@ export function ApiKeysTable({
                           checked={newKeyPermissions.includes(perm.id)}
                           onCheckedChange={(checked) => {
                             if (checked) {
-                              setNewKeyPermissions([
-                                ...newKeyPermissions,
-                                perm.id,
-                              ]);
+                              setNewKeyPermissions([...newKeyPermissions, perm.id]);
                             } else {
-                              setNewKeyPermissions(
-                                newKeyPermissions.filter((p) => p !== perm.id)
-                              );
+                              setNewKeyPermissions(newKeyPermissions.filter((p) => p !== perm.id));
                             }
                           }}
                         />
                         <div>
                           <Label htmlFor={perm.id}>{perm.label}</Label>
-                          <p className="text-xs text-muted-foreground">
-                            {perm.desc}
-                          </p>
+                          <p className="text-xs text-muted-foreground">{perm.desc}</p>
                         </div>
                       </div>
                     ))}
@@ -181,10 +150,7 @@ export function ApiKeysTable({
                   <Button variant="outline" onClick={handleCloseGenerateDialog}>
                     Cancel
                   </Button>
-                  <Button
-                    onClick={handleGenerate}
-                    disabled={!newKeyName || isGenerating}
-                  >
+                  <Button onClick={handleGenerate} disabled={!newKeyName || isGenerating}>
                     {isGenerating ? "Generating..." : "Generate Key"}
                   </Button>
                 </DialogFooter>
@@ -195,9 +161,7 @@ export function ApiKeysTable({
                   <div className="flex items-start gap-2">
                     <AlertTriangle className="h-5 w-5 text-amber-600 mt-0.5" />
                     <div>
-                      <p className="font-medium text-amber-800 dark:text-amber-200">
-                        Save your API key now!
-                      </p>
+                      <p className="font-medium text-amber-800 dark:text-amber-200">Save your API key now!</p>
                       <p className="text-sm text-amber-700 dark:text-amber-300">
                         This key will only be shown once. Store it securely.
                       </p>
@@ -208,22 +172,9 @@ export function ApiKeysTable({
                 <div className="space-y-2">
                   <Label>Your API Key</Label>
                   <div className="flex gap-2">
-                    <Input
-                      type={showKey ? "text" : "password"}
-                      value={generatedKey}
-                      readOnly
-                      className="font-mono"
-                    />
-                    <Button
-                      variant="outline"
-                      size="icon"
-                      onClick={() => setShowKey(!showKey)}
-                    >
-                      {showKey ? (
-                        <EyeOff className="h-4 w-4" />
-                      ) : (
-                        <Eye className="h-4 w-4" />
-                      )}
+                    <Input type={showKey ? "text" : "password"} value={generatedKey} readOnly className="font-mono" />
+                    <Button variant="outline" size="icon" onClick={() => setShowKey(!showKey)}>
+                      {showKey ? <EyeOff className="h-4 w-4" /> : <Eye className="h-4 w-4" />}
                     </Button>
                     <Button
                       variant="outline"
@@ -263,9 +214,7 @@ export function ApiKeysTable({
               <TableRow key={key.id}>
                 <TableCell className="font-medium">{key.name}</TableCell>
                 <TableCell>
-                  <code className="text-sm bg-muted px-2 py-1 rounded">
-                    {key.keyPrefix}
-                  </code>
+                  <code className="text-sm bg-muted px-2 py-1 rounded">{key.keyPrefix}</code>
                 </TableCell>
                 <TableCell>
                   <div className="flex gap-1">
@@ -276,28 +225,18 @@ export function ApiKeysTable({
                     ))}
                   </div>
                 </TableCell>
-                <TableCell className="text-sm text-muted-foreground">
-                  {formatDate(key.createdAt)}
-                </TableCell>
+                <TableCell className="text-sm text-muted-foreground">{formatDate(key.createdAt)}</TableCell>
                 <TableCell className="text-sm text-muted-foreground">
                   {key.lastUsedAt ? formatDate(key.lastUsedAt) : "Never"}
                 </TableCell>
                 <TableCell className="text-right">
                   <div className="flex justify-end gap-1">
-                    <Button
-                      variant="ghost"
-                      size="icon"
-                      onClick={() => onCopy(key.keyPrefix)}
-                    >
+                    <Button variant="ghost" size="icon" onClick={() => onCopy(key.keyPrefix)}>
                       <Copy className="h-4 w-4" />
                     </Button>
                     <AlertDialog>
                       <AlertDialogTrigger asChild>
-                        <Button
-                          variant="ghost"
-                          size="icon"
-                          className="text-destructive"
-                        >
+                        <Button variant="ghost" size="icon" className="text-destructive">
                           <Trash2 className="h-4 w-4" />
                         </Button>
                       </AlertDialogTrigger>
@@ -305,8 +244,7 @@ export function ApiKeysTable({
                         <AlertDialogHeader>
                           <AlertDialogTitle>Revoke API Key?</AlertDialogTitle>
                           <AlertDialogDescription>
-                            This action cannot be undone. Any applications using
-                            this key will lose access immediately.
+                            This action cannot be undone. Any applications using this key will lose access immediately.
                           </AlertDialogDescription>
                         </AlertDialogHeader>
                         <AlertDialogFooter>
@@ -332,9 +270,7 @@ export function ApiKeysTable({
             <AlertTriangle className="h-5 w-5 text-amber-600 mt-0.5" />
             <div>
               <p className="font-medium">Keep your API keys secret</p>
-              <p className="text-sm text-muted-foreground">
-                Never share them in public repositories or client-side code.
-              </p>
+              <p className="text-sm text-muted-foreground">Never share them in public repositories or client-side code.</p>
             </div>
           </div>
         </div>

@@ -61,7 +61,7 @@ export default function LoginPage() {
             </div>
           </div>
           <CardTitle className="text-2xl font-bold">Welcome back</CardTitle>
-          <CardDescription>Sign in to N4P Social Intelligence Platform</CardDescription>
+          <CardDescription>Sign in to Asha Intelligence Platform</CardDescription>
         </CardHeader>
 
         <CardContent>
@@ -162,7 +162,7 @@ export default function LoginPage() {
       </Card>
 
       {/* Footer */}
-      <p className="mt-8 text-sm text-slate-500 dark:text-slate-400">© 2024 N4P Platform. All rights reserved.</p>
+      <p className="mt-8 text-sm text-slate-500 dark:text-slate-400">© 2026 Asha Intelligence. All rights reserved.</p>
     </div>
   );
 }

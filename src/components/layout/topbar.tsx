@@ -67,7 +67,7 @@ export function Topbar() {
             <div className="h-8 w-8 rounded-lg bg-blue-600 flex items-center justify-center">
               <BarChart3 className="h-5 w-5 text-white" />
             </div>
-            <span className="font-semibold text-lg hidden md:inline-block">N4P</span>
+            <span className="font-semibold text-lg hidden md:inline-block">Asha</span>
           </Link>
 
           {/* Project Selector */}

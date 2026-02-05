@@ -36,7 +36,7 @@ export default function PortalLayout({ children }: { children: React.ReactNode }
             <div className="h-8 w-8 rounded-lg bg-blue-600 flex items-center justify-center">
               <BarChart3 className="h-5 w-5 text-white" />
             </div>
-            <span className="font-semibold text-lg hidden sm:inline-block">N4P Platform</span>
+            <span className="font-semibold text-lg hidden sm:inline-block">Asha Intelligence</span>
           </Link>
 
           {/* Right: Actions */}
