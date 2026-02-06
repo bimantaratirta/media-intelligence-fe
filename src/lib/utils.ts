@@ -56,16 +56,25 @@ export function getSentimentBgColor(sentiment: 'positive' | 'neutral' | 'negativ
   return colors[sentiment]
 }
 
-// Get platform color
+// Get platform color (muted brand colors)
 export function getPlatformColor(platform: string): string {
   const colors: Record<string, string> = {
-    twitter: '#1DA1F2',
-    instagram: '#E4405F',
-    tiktok: '#000000',
-    youtube: '#FF0000',
-    facebook: '#1877F2',
-    threads: '#000000',
-    news: '#6B7280',
+    twitter: '#1D9BF0',   // slightly muted
+    instagram: '#C13584', // more muted pink
+    tiktok: '#475569',    // slate-600, not black
+    youtube: '#B91C1C',   // red-700, darker to avoid conflict with negative sentiment
+    facebook: '#1877F2',  // tetap
+    threads: '#475569',   // slate-600
+    news: '#6B7280',      // tetap
   }
   return colors[platform] || '#6B7280'
 }
+
+// Sequential scale for heatmaps and age charts (5 levels)
+export const BLUE_SEQUENTIAL_SCALE = [
+  '#EFF6FF', // blue-50
+  '#BFDBFE', // blue-200
+  '#60A5FA', // blue-400
+  '#2563EB', // blue-600
+  '#1E40AF', // blue-800
+]

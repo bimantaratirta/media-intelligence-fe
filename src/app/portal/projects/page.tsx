@@ -26,9 +26,7 @@ export default function ProjectsPage() {
   const totalMentions = topics?.reduce((sum, t) => sum + t.mentionCount, 0) ?? 0;
   const activeProjects = topics?.filter((t) => t.status === "active").length ?? 0;
   const lastUpdate = topics?.length
-    ? topics.reduce((latest, t) =>
-        new Date(t.lastCrawledAt) > new Date(latest.lastCrawledAt) ? t : latest
-      ).lastCrawledAt
+    ? topics.reduce((latest, t) => (new Date(t.lastCrawledAt) > new Date(latest.lastCrawledAt) ? t : latest)).lastCrawledAt
     : null;
 
   const userName = user?.name?.split(" ")[0] ?? "there";
@@ -42,9 +40,7 @@ export default function ProjectsPage() {
             <h1 className="text-2xl font-semibold text-slate-900 dark:text-slate-100">
               {getGreeting()}, {userName}
             </h1>
-            <p className="text-slate-500 dark:text-slate-400 mt-1">
-              Here&apos;s what&apos;s happening with your projects
-            </p>
+            <p className="text-slate-500 dark:text-slate-400 mt-1">Here&apos;s what&apos;s happening with your projects</p>
           </div>
           <Button
             onClick={() => router.push("/portal/create")}
@@ -106,7 +102,7 @@ export default function ProjectsPage() {
 
       {/* Projects List */}
       {!isLoading && !error && topics && topics.length > 0 && (
-        <div className="space-y-1">
+        <div className="space-y-4">
           {topics.map((topic) => (
             <ProjectCard key={topic.id} topic={topic} variant="compact" />
           ))}
@@ -119,16 +115,11 @@ export default function ProjectsPage() {
           <div className="h-16 w-16 rounded-full bg-slate-100 dark:bg-slate-800 flex items-center justify-center mx-auto mb-4">
             <FolderOpen className="h-8 w-8 text-slate-400" />
           </div>
-          <h3 className="font-semibold text-lg text-slate-900 dark:text-slate-100">
-            No projects yet
-          </h3>
+          <h3 className="font-semibold text-lg text-slate-900 dark:text-slate-100">No projects yet</h3>
           <p className="text-slate-500 dark:text-slate-400 mt-1 max-w-sm mx-auto">
             Create your first project to start monitoring social media mentions and analytics.
           </p>
-          <Button
-            className="mt-6 bg-blue-600 hover:bg-blue-700 text-white"
-            onClick={() => router.push("/portal/create")}
-          >
+          <Button className="mt-6 bg-blue-600 hover:bg-blue-700 text-white" onClick={() => router.push("/portal/create")}>
             <Plus className="h-4 w-4 mr-2" />
             Create Your First Project
           </Button>

@@ -3,6 +3,7 @@
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 import { Badge } from "@/components/ui/badge";
 import { Newspaper, Youtube, Facebook } from "lucide-react";
+import { BLUE_SEQUENTIAL_SCALE } from "@/lib/utils";
 
 interface PlatformDemo {
   platform: string;
@@ -17,14 +18,8 @@ interface PlatformDemographicsMatrixProps {
   data: PlatformDemo[];
 }
 
-const AGE_COLORS = [
-  "hsl(260, 70%, 50%)", // violet
-  "hsl(230, 70%, 50%)", // indigo
-  "hsl(210, 70%, 50%)", // blue
-  "hsl(190, 70%, 50%)", // cyan
-  "hsl(160, 70%, 50%)", // teal
-  "hsl(140, 70%, 50%)", // green
-];
+// Use blue sequential scale instead of rainbow HSL
+const AGE_COLORS = BLUE_SEQUENTIAL_SCALE;
 
 function PlatformIcon({ platform }: { platform: string }) {
   switch (platform) {
@@ -75,13 +70,9 @@ export function PlatformDemographicsMatrix({ data }: PlatformDemographicsMatrixP
               <div className="flex items-center justify-between mb-3">
                 <div className="flex items-center gap-2">
                   <PlatformIcon platform={platform.platform} />
-                  <span className="font-medium text-slate-900 dark:text-slate-200">
-                    {platform.platformName}
-                  </span>
+                  <span className="font-medium text-slate-900 dark:text-slate-200">{platform.platformName}</span>
                 </div>
-                <Badge variant="secondary">
-                  {platform.totalMentions.toLocaleString()} mentions
-                </Badge>
+                <Badge variant="secondary">{platform.totalMentions.toLocaleString()} mentions</Badge>
               </div>
 
               <div className="grid grid-cols-2 gap-4 mb-3">
@@ -94,19 +85,15 @@ export function PlatformDemographicsMatrix({ data }: PlatformDemographicsMatrixP
                       style={{ width: `${platform.gender.male}%` }}
                     >
                       {platform.gender.male >= 20 && (
-                        <span className="text-[10px] text-white font-medium">
-                          {platform.gender.male}% ♂
-                        </span>
+                        <span className="text-[10px] text-white font-medium">{platform.gender.male}% ♂</span>
                       )}
                     </div>
                     <div
-                      className="bg-pink-500 flex items-center justify-center"
+                      className="bg-purple-600 flex items-center justify-center"
                       style={{ width: `${platform.gender.female}%` }}
                     >
                       {platform.gender.female >= 20 && (
-                        <span className="text-[10px] text-white font-medium">
-                          {platform.gender.female}% ♀
-                        </span>
+                        <span className="text-[10px] text-white font-medium">{platform.gender.female}% ♀</span>
                       )}
                     </div>
                   </div>
@@ -140,12 +127,8 @@ export function PlatformDemographicsMatrix({ data }: PlatformDemographicsMatrixP
                   ))}
                 </div>
                 <div className="flex justify-between mt-1">
-                  <span className="text-[10px] text-slate-500 dark:text-slate-400">
-                    {ageLabels[0]}
-                  </span>
-                  <span className="text-[10px] text-slate-500 dark:text-slate-400">
-                    {ageLabels[ageLabels.length - 1]}
-                  </span>
+                  <span className="text-[10px] text-slate-500 dark:text-slate-400">{ageLabels[0]}</span>
+                  <span className="text-[10px] text-slate-500 dark:text-slate-400">{ageLabels[ageLabels.length - 1]}</span>
                 </div>
               </div>
             </div>

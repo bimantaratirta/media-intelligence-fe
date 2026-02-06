@@ -14,10 +14,10 @@ export function SentimentGauge({ value, change }: SentimentGaugeProps) {
   // Convert -1 to 1 range to 0 to 180 degrees
   const angle = ((value + 1) / 2) * 180;
 
-  // Determine color based on value
+  // Determine color based on value (muted colors)
   const getColor = () => {
-    if (value > 0.2) return "#22C55E"; // green
-    if (value < -0.2) return "#EF4444"; // red
+    if (value > 0.2) return "#16A34A"; // green-600 (muted)
+    if (value < -0.2) return "#DC2626"; // red-600 (muted)
     return "#64748B"; // neutral
   };
 
@@ -39,12 +39,12 @@ export function SentimentGauge({ value, change }: SentimentGaugeProps) {
           strokeLinecap="round"
         />
 
-        {/* Gradient definitions */}
+        {/* Gradient definitions - muted colors */}
         <defs>
           <linearGradient id="gaugeGradient" x1="0%" y1="0%" x2="100%" y2="0%">
-            <stop offset="0%" stopColor="#EF4444" />
+            <stop offset="0%" stopColor="#DC2626" />
             <stop offset="50%" stopColor="#64748B" />
-            <stop offset="100%" stopColor="#22C55E" />
+            <stop offset="100%" stopColor="#16A34A" />
           </linearGradient>
         </defs>
 

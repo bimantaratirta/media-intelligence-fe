@@ -3,6 +3,7 @@
 import { BarChart, Bar, XAxis, YAxis, ResponsiveContainer, Tooltip, Cell } from "recharts";
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 import { useTheme } from "next-themes";
+import { BLUE_SEQUENTIAL_SCALE } from "@/lib/utils";
 
 interface AgeGroup {
   group: string;
@@ -20,23 +21,15 @@ interface AgeDistributionChartProps {
   data: AgeGroup[];
 }
 
-const COLORS = [
-  "#8B5CF6", // violet-500
-  "#6366F1", // indigo-500
-  "#3B82F6", // blue-500
-  "#0EA5E9", // sky-500
-  "#14B8A6", // teal-500
-  "#22C55E", // green-500
-];
+// Use blue sequential scale instead of rainbow
+const COLORS = BLUE_SEQUENTIAL_SCALE;
 
 export function AgeDistributionChart({ data }: AgeDistributionChartProps) {
   const { theme } = useTheme();
   const isDark = theme === "dark";
 
   // Find peak age group
-  const peakGroup = data.reduce((prev, current) =>
-    prev.percentage > current.percentage ? prev : current
-  );
+  const peakGroup = data.reduce((prev, current) => (prev.percentage > current.percentage ? prev : current));
 
   return (
     <Card>
@@ -46,11 +39,7 @@ export function AgeDistributionChart({ data }: AgeDistributionChartProps) {
       <CardContent>
         <div className="h-[250px]">
           <ResponsiveContainer width="100%" height="100%">
-            <BarChart
-              data={data}
-              layout="vertical"
-              margin={{ top: 5, right: 30, left: 50, bottom: 5 }}
-            >
+            <BarChart data={data} layout="vertical" margin={{ top: 5, right: 30, left: 50, bottom: 5 }}>
               <XAxis
                 type="number"
                 domain={[0, 50]}
@@ -71,10 +60,7 @@ export function AgeDistributionChart({ data }: AgeDistributionChartProps) {
                 }}
                 formatter={(value, _name, props) => {
                   const payload = props.payload as AgeGroup;
-                  return [
-                    `${value}% (${payload.count.toLocaleString()} mentions)`,
-                    payload.label,
-                  ];
+                  return [`${value}% (${payload.count.toLocaleString()} mentions)`, payload.label];
                 }}
                 labelFormatter={(label) => `Age: ${label}`}
               />
@@ -88,8 +74,8 @@ export function AgeDistributionChart({ data }: AgeDistributionChartProps) {
         </div>
         <div className="mt-4 p-3 bg-slate-100 dark:bg-slate-800 rounded-lg">
           <p className="text-sm text-slate-600 dark:text-slate-400">
-            <span className="font-medium text-slate-900 dark:text-slate-200">Peak:</span>{" "}
-            {peakGroup.group} years ({peakGroup.label}) - {peakGroup.percentage}%
+            <span className="font-medium text-slate-900 dark:text-slate-200">Peak:</span> {peakGroup.group} years (
+            {peakGroup.label}) - {peakGroup.percentage}%
           </p>
         </div>
       </CardContent>

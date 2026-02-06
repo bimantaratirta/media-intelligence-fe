@@ -12,13 +12,13 @@ interface PlatformBarChartProps {
 }
 
 const PLATFORM_COLORS: Record<string, string> = {
-  "X/Twitter": "#1DA1F2",
-  Twitter: "#1DA1F2",
-  Instagram: "#E4405F",
-  TikTok: "#000000",
+  "X/Twitter": "#1D9BF0", // slightly muted
+  Twitter: "#1D9BF0", // slightly muted
+  Instagram: "#C13584", // more muted pink
+  TikTok: "#475569", // slate-600, not black
   Facebook: "#1877F2",
-  YouTube: "#FF0000",
-  "News Portal": "#6366F1",
+  YouTube: "#B91C1C", // red-700, darker to avoid conflict
+  "News Portal": "#6366F1", // indigo-500
   Others: "#94A3B8",
 };
 

@@ -31,7 +31,7 @@ export function ProjectCard({ topic, variant = "default" }: ProjectCardProps) {
         "text-xs",
         topic.status === "active"
           ? "bg-green-100 text-green-700 dark:bg-green-900/30 dark:text-green-400"
-          : "bg-yellow-100 text-yellow-700 dark:bg-yellow-900/30 dark:text-yellow-400"
+          : "bg-yellow-100 text-yellow-700 dark:bg-yellow-900/30 dark:text-yellow-400",
       )}
     >
       {topic.status === "active" ? (
@@ -61,18 +61,12 @@ export function ProjectCard({ topic, variant = "default" }: ProjectCardProps) {
             <div className="flex-1 min-w-0 space-y-4">
               <div className="flex items-center gap-3">
                 <StatusBadge />
-                <span className="text-xs text-slate-400 dark:text-slate-500">
-                  Most recent
-                </span>
+                <span className="text-xs text-slate-400 dark:text-slate-500">Most recent</span>
               </div>
 
               <div>
-                <h3 className="font-semibold text-xl text-slate-900 dark:text-slate-100 line-clamp-1">
-                  {topic.name}
-                </h3>
-                <p className="text-sm text-slate-500 dark:text-slate-400 line-clamp-2 mt-1.5">
-                  {topic.description}
-                </p>
+                <h3 className="font-semibold text-xl text-slate-900 dark:text-slate-100 line-clamp-1">{topic.name}</h3>
+                <p className="text-sm text-slate-500 dark:text-slate-400 line-clamp-2 mt-1.5">{topic.description}</p>
               </div>
 
               <div className="flex flex-wrap items-center gap-x-6 gap-y-2 text-sm">
@@ -107,46 +101,58 @@ export function ProjectCard({ topic, variant = "default" }: ProjectCardProps) {
     );
   }
 
-  // Compact variant - list item style
+  // Compact variant - redesigned with visible card styling
   if (variant === "compact") {
     return (
-      <div
-        className="group flex items-center gap-4 p-4 rounded-lg hover:bg-slate-50 dark:hover:bg-slate-800/50 cursor-pointer transition-colors"
+      <Card
+        className={cn(
+          "group cursor-pointer transition-all duration-200",
+          "border border-slate-200 dark:border-slate-700/50",
+          "hover:shadow-lg hover:border-blue-300 dark:hover:border-blue-600/50",
+          "hover:scale-[1.01]",
+          "bg-white dark:bg-slate-800/50",
+          "backdrop-blur-sm",
+        )}
         onClick={handleOpen}
       >
-        {/* Status dot */}
-        <div
-          className={cn(
-            "h-2.5 w-2.5 rounded-full shrink-0",
-            topic.status === "active"
-              ? "bg-green-500"
-              : "bg-yellow-500"
-          )}
-        />
+        <div className="flex items-center gap-4 p-4">
+          {/* Status indicator with glow effect */}
+          <div className="relative shrink-0">
+            <div
+              className={cn(
+                "h-3 w-3 rounded-full",
+                topic.status === "active"
+                  ? "bg-green-500 shadow-[0_0_8px_rgba(34,197,94,0.5)]"
+                  : "bg-yellow-500 shadow-[0_0_8px_rgba(234,179,8,0.3)]",
+              )}
+            />
+          </div>
 
-        {/* Content */}
-        <div className="flex-1 min-w-0">
-          <h4 className="font-medium text-slate-900 dark:text-slate-100 truncate">
-            {topic.name}
-          </h4>
-          <p className="text-xs text-slate-500 dark:text-slate-400 truncate mt-0.5">
-            {topic.description}
-          </p>
+          {/* Content */}
+          <div className="flex-1 min-w-0">
+            <h4 className="font-semibold text-slate-900 dark:text-slate-100 truncate group-hover:text-blue-600 dark:group-hover:text-blue-400 transition-colors">
+              {topic.name}
+            </h4>
+            <p className="text-sm text-slate-500 dark:text-slate-400 truncate mt-0.5">{topic.description}</p>
+          </div>
+
+          {/* Stats with visual separation */}
+          <div className="hidden sm:flex items-center gap-6 shrink-0">
+            <div className="flex items-center gap-2 px-3 py-1.5 rounded-full bg-blue-50 dark:bg-blue-900/20">
+              <BarChart3 className="h-3.5 w-3.5 text-blue-500" />
+              <span className="font-semibold text-sm text-blue-700 dark:text-blue-300">
+                {formatCompact(topic.mentionCount)}
+              </span>
+            </div>
+            <div className="text-xs text-slate-400 dark:text-slate-500">{formatRelative(topic.lastCrawledAt)}</div>
+          </div>
+
+          {/* Arrow with animation */}
+          <div className="shrink-0 p-2 rounded-full bg-slate-100 dark:bg-slate-700/50 opacity-0 group-hover:opacity-100 transition-all group-hover:bg-blue-100 dark:group-hover:bg-blue-900/30">
+            <ArrowRight className="h-4 w-4 text-slate-400 group-hover:text-blue-600 dark:group-hover:text-blue-400 transition-colors" />
+          </div>
         </div>
-
-        {/* Stats */}
-        <div className="hidden sm:flex items-center gap-4 text-sm text-slate-500 dark:text-slate-400 shrink-0">
-          <span className="font-medium text-slate-700 dark:text-slate-300">
-            {formatCompact(topic.mentionCount)}
-          </span>
-          <span className="text-xs">
-            {formatRelative(topic.lastCrawledAt)}
-          </span>
-        </div>
-
-        {/* Arrow */}
-        <ArrowRight className="h-4 w-4 text-slate-400 shrink-0 opacity-0 group-hover:opacity-100 transition-opacity" />
-      </div>
+      </Card>
     );
   }
 

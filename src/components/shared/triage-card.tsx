@@ -46,6 +46,7 @@ const iconMap: Record<string, LucideIcon> = {
   list: List,
 };
 
+// Reduced color palette - 5 essential colors only (muted versions)
 const colorMap: Record<string, { bg: string; text: string; border: string }> = {
   red: {
     bg: "bg-red-50 dark:bg-red-900/20",
@@ -53,9 +54,10 @@ const colorMap: Record<string, { bg: string; text: string; border: string }> = {
     border: "border-red-200 dark:border-red-800",
   },
   orange: {
-    bg: "bg-orange-50 dark:bg-orange-900/20",
-    text: "text-orange-600 dark:text-orange-400",
-    border: "border-orange-200 dark:border-orange-800",
+    // Map orange to red (similar semantic meaning)
+    bg: "bg-red-50 dark:bg-red-900/20",
+    text: "text-red-600 dark:text-red-400",
+    border: "border-red-200 dark:border-red-800",
   },
   purple: {
     bg: "bg-purple-50 dark:bg-purple-900/20",
@@ -73,14 +75,16 @@ const colorMap: Record<string, { bg: string; text: string; border: string }> = {
     border: "border-blue-200 dark:border-blue-800",
   },
   indigo: {
-    bg: "bg-indigo-50 dark:bg-indigo-900/20",
-    text: "text-indigo-600 dark:text-indigo-400",
-    border: "border-indigo-200 dark:border-indigo-800",
+    // Map indigo to blue (similar color)
+    bg: "bg-blue-50 dark:bg-blue-900/20",
+    text: "text-blue-600 dark:text-blue-400",
+    border: "border-blue-200 dark:border-blue-800",
   },
   yellow: {
-    bg: "bg-yellow-50 dark:bg-yellow-900/20",
-    text: "text-yellow-600 dark:text-yellow-400",
-    border: "border-yellow-200 dark:border-yellow-800",
+    // Map yellow to slate (avoid bright yellow)
+    bg: "bg-slate-50 dark:bg-slate-800",
+    text: "text-slate-600 dark:text-slate-400",
+    border: "border-slate-200 dark:border-slate-700",
   },
   green: {
     bg: "bg-green-50 dark:bg-green-900/20",

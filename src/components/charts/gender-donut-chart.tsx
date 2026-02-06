@@ -15,8 +15,8 @@ interface GenderDonutChartProps {
 }
 
 const COLORS = {
-  male: "#3B82F6", // blue-500
-  female: "#EC4899", // pink-500
+  male: "#2563EB", // blue-600
+  female: "#9333EA", // purple-600 (not pink)
   unknown: "#6B7280", // gray-500
 };
 
@@ -38,14 +38,7 @@ function renderCustomizedLabel(props: LabelProps) {
   const y = cy + radius * Math.sin(-midAngle * RADIAN);
 
   return (
-    <text
-      x={x}
-      y={y}
-      fill="white"
-      textAnchor="middle"
-      dominantBaseline="central"
-      className="text-sm font-semibold"
-    >
+    <text x={x} y={y} fill="white" textAnchor="middle" dominantBaseline="central" className="text-sm font-semibold">
       {`${(percent * 100).toFixed(0)}%`}
     </text>
   );
