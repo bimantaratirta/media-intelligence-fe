@@ -49,6 +49,8 @@ export const GENDER_COLORS = {
     unknown: '#6B7280', // gray-500
 } as const
 
+// Data refresh: 24 jam sekali (fixed, tidak ada pilihan)
+
 export const PROVINCES = [
     { id: 'AC', name: 'Aceh' },
     { id: 'SU', name: 'Sumatera Utara' },

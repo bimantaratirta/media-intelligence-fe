@@ -4,7 +4,7 @@ import { Twitter, Instagram, Music, Youtube, Facebook, AtSign, Newspaper, Globe 
 
 import { Label } from "@/components/ui/label";
 import { Switch } from "@/components/ui/switch";
-import { RadioGroup, RadioGroupItem } from "@/components/ui/radio-group";
+import { Clock } from "lucide-react";
 import type { CreateProjectFormData } from "@/types/create-project";
 
 interface StepPlatformsProps {
@@ -37,7 +37,7 @@ export function StepPlatforms({ data, onChange }: StepPlatformsProps) {
     <div className="space-y-6">
       <div>
         <h2 className="text-lg font-semibold">Data Sources</h2>
-        <p className="text-sm text-slate-500">Select platforms to monitor and crawling frequency</p>
+        <p className="text-sm text-slate-500">Select platforms to monitor</p>
       </div>
 
       {/* Platforms */}
@@ -78,37 +78,15 @@ export function StepPlatforms({ data, onChange }: StepPlatformsProps) {
         </div>
       </div>
 
-      {/* Frequency */}
-      <div className="space-y-4">
-        <Label>Crawling Frequency</Label>
-        <RadioGroup
-          value={data.crawlFrequency}
-          onValueChange={(value) => onChange({ crawlFrequency: value as CreateProjectFormData["crawlFrequency"] })}
-          className="grid grid-cols-2 sm:grid-cols-4 gap-3"
-        >
-          {[
-            { value: "realtime", label: "Real-time", description: "Instant updates" },
-            { value: "15min", label: "Every 15 min", description: "Recommended" },
-            { value: "hourly", label: "Hourly", description: "Balanced" },
-            { value: "daily", label: "Daily", description: "Low volume" },
-          ].map((option) => (
-            <label
-              key={option.value}
-              className={`
-                flex flex-col p-4 rounded-lg border-2 cursor-pointer transition-colors
-                ${
-                  data.crawlFrequency === option.value
-                    ? "border-blue-500 bg-blue-50 dark:bg-blue-900/20"
-                    : "border-slate-200 dark:border-slate-700 hover:border-slate-300"
-                }
-              `}
-            >
-              <RadioGroupItem value={option.value} className="sr-only" />
-              <span className="font-medium text-sm">{option.label}</span>
-              <span className="text-xs text-slate-500">{option.description}</span>
-            </label>
-          ))}
-        </RadioGroup>
+      {/* Data Refresh Info */}
+      <div className="flex items-center gap-3 p-4 rounded-lg bg-blue-50 dark:bg-blue-900/20 border border-blue-200 dark:border-blue-800">
+        <div className="flex h-10 w-10 shrink-0 items-center justify-center rounded-full bg-blue-100 dark:bg-blue-900">
+          <Clock className="h-5 w-5 text-blue-600" />
+        </div>
+        <div>
+          <p className="font-medium">Data refreshed every 24 hours</p>
+          <p className="text-sm text-slate-500">Your mentions will be collected and updated daily</p>
+        </div>
       </div>
     </div>
   );

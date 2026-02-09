@@ -26,7 +26,6 @@ import { Input } from "@/components/ui/input";
 import { Label } from "@/components/ui/label";
 import { Textarea } from "@/components/ui/textarea";
 import { Switch } from "@/components/ui/switch";
-import { RadioGroup, RadioGroupItem } from "@/components/ui/radio-group";
 import { Badge } from "@/components/ui/badge";
 import { Separator } from "@/components/ui/separator";
 import { Skeleton } from "@/components/ui/skeleton";
@@ -40,17 +39,13 @@ interface TopicConfig {
   status: string;
   createdAt: string;
   updatedAt: string;
+  lastCrawledAt: string;
   keywords: {
     primary: string[];
     mustContain: string[];
     exclude: string[];
   };
   platforms: Record<string, boolean>;
-  schedule: {
-    frequency: string;
-    lastCrawl: string;
-    nextCrawl: string;
-  };
 }
 
 async function fetchTopicConfig(topicId: string): Promise<TopicConfig> {
@@ -105,7 +100,6 @@ export default function TopicConfigPage() {
   const [mustContain, setMustContain] = useState<string[]>([]);
   const [excludeKeywords, setExcludeKeywords] = useState<string[]>([]);
   const [platforms, setPlatforms] = useState<Record<string, boolean>>({});
-  const [frequency, setFrequency] = useState("15min");
   const [hasChanges, setHasChanges] = useState(false);
   const [isSaving, setIsSaving] = useState(false);
 
@@ -118,7 +112,6 @@ export default function TopicConfigPage() {
       setMustContain(config.keywords.mustContain);
       setExcludeKeywords(config.keywords.exclude);
       setPlatforms(config.platforms);
-      setFrequency(config.schedule.frequency);
     }
   }, [config]);
 
@@ -131,11 +124,10 @@ export default function TopicConfigPage() {
         JSON.stringify(primaryKeywords) !== JSON.stringify(config.keywords.primary) ||
         JSON.stringify(mustContain) !== JSON.stringify(config.keywords.mustContain) ||
         JSON.stringify(excludeKeywords) !== JSON.stringify(config.keywords.exclude) ||
-        JSON.stringify(platforms) !== JSON.stringify(config.platforms) ||
-        frequency !== config.schedule.frequency;
+        JSON.stringify(platforms) !== JSON.stringify(config.platforms);
       setHasChanges(changed);
     }
-  }, [name, description, primaryKeywords, mustContain, excludeKeywords, platforms, frequency, config]);
+  }, [name, description, primaryKeywords, mustContain, excludeKeywords, platforms, config]);
 
   const togglePlatform = (platformId: string) => {
     setPlatforms((prev) => ({
@@ -180,7 +172,6 @@ export default function TopicConfigPage() {
       setMustContain(config.keywords.mustContain);
       setExcludeKeywords(config.keywords.exclude);
       setPlatforms(config.platforms);
-      setFrequency(config.schedule.frequency);
       setHasChanges(false);
     }
   };
@@ -356,46 +347,28 @@ export default function TopicConfigPage() {
         </CardContent>
       </Card>
 
-      {/* Crawling Schedule */}
+      {/* Data Refresh Info */}
       <Card>
         <CardHeader>
           <CardTitle className="flex items-center gap-2">
             <Clock className="h-5 w-5" />
-            Crawling Schedule
+            Data Refresh
           </CardTitle>
         </CardHeader>
         <CardContent>
-          <RadioGroup value={frequency} onValueChange={setFrequency} className="grid grid-cols-2 sm:grid-cols-4 gap-3">
-            {[
-              { value: "realtime", label: "Real-time", desc: "Instant updates" },
-              { value: "15min", label: "Every 15 min", desc: "Recommended" },
-              { value: "hourly", label: "Hourly", desc: "Balanced" },
-              { value: "daily", label: "Daily", desc: "Low volume" },
-            ].map((option) => (
-              <label
-                key={option.value}
-                className={`
-                  flex flex-col p-4 rounded-lg border-2 cursor-pointer transition-all
-                  ${
-                    frequency === option.value
-                      ? "border-blue-500 bg-blue-50 dark:bg-blue-900/20"
-                      : "border-slate-200 dark:border-slate-700 hover:border-slate-300"
-                  }
-                `}
-              >
-                <RadioGroupItem value={option.value} className="sr-only" />
-                <span className="font-medium">{option.label}</span>
-                <span className="text-xs text-slate-500">{option.desc}</span>
-              </label>
-            ))}
-          </RadioGroup>
-
-          {config?.schedule && (
-            <div className="mt-4 text-sm text-slate-500 flex gap-6">
-              <span>Last crawl: {formatRelative(config.schedule.lastCrawl)}</span>
-              <span>Next crawl: {formatRelative(config.schedule.nextCrawl)}</span>
+          <div className="flex items-center gap-4 p-4 rounded-lg bg-slate-50 dark:bg-slate-800/50 border border-slate-200 dark:border-slate-700">
+            <div className="h-10 w-10 rounded-full bg-blue-100 dark:bg-blue-900/30 flex items-center justify-center">
+              <Clock className="h-5 w-5 text-blue-600 dark:text-blue-400" />
             </div>
-          )}
+            <div>
+              <p className="font-medium">Data refreshed every 24 hours</p>
+              <p className="text-sm text-slate-500">
+                {config?.lastCrawledAt
+                  ? `Last updated: ${formatRelative(config.lastCrawledAt)}`
+                  : "Waiting for first data collection"}
+              </p>
+            </div>
+          </div>
         </CardContent>
       </Card>
 

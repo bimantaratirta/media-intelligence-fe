@@ -19,7 +19,7 @@ export interface CreateProjectFormData {
         newsPortal: boolean
         googleNews: boolean
     }
-    crawlFrequency: 'realtime' | '15min' | 'hourly' | 'daily'
+
 }
 
 export const defaultFormData: CreateProjectFormData = {
@@ -38,5 +38,5 @@ export const defaultFormData: CreateProjectFormData = {
         newsPortal: true,
         googleNews: true,
     },
-    crawlFrequency: '15min',
+
 }

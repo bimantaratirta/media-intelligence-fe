@@ -2,7 +2,8 @@
 
 import { usePathname, useRouter } from "next/navigation";
 import Link from "next/link";
-import { BarChart3, Bell, ChevronDown, Home, LogOut, Menu, Settings, User } from "lucide-react";
+import { BarChart3, ChevronDown, Home, LogOut, Menu, Settings, User } from "lucide-react";
+// Bell icon hidden - notifications feature not yet enabled
 
 import { Button } from "@/components/ui/button";
 import {
@@ -103,10 +104,11 @@ export function Topbar() {
         <div className="flex items-center gap-2">
           <ThemeToggle />
 
-          <Button variant="ghost" size="icon" className="relative">
+          {/* Hidden for now - notifications feature not yet enabled */}
+          {/* <Button variant="ghost" size="icon" className="relative">
             <Bell className="h-5 w-5" />
             <span className="absolute top-1 right-1 h-2 w-2 rounded-full bg-red-500" />
-          </Button>
+          </Button> */}
 
           <DropdownMenu>
             <DropdownMenuTrigger asChild>

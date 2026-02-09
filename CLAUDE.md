@@ -152,6 +152,23 @@ Gunakan warna yang konsisten untuk chart:
 - `DateRangePicker` - Picker tanggal untuk filtering
 - `InsightPanel` - AI-generated insights display
 
+## Data Refresh
+
+- Data di-refresh **setiap 24 jam sekali** (fixed)
+- `lastCrawledAt` pada Topic menunjukkan kapan data terakhir diperbarui
+- Tidak ada real-time updates - polling only
+
+## Hidden Features (Belum Diaktifkan)
+
+Fitur-fitur berikut sudah ada di codebase tapi di-hide dari UI:
+- **Notifications** - Alert settings (`/settings/notifications`)
+- **API Keys** - API key management (`/settings/api-keys`)
+- **Bell icon** - Notification indicator di topbar
+
+Untuk mengaktifkan, uncomment di:
+- `lib/constants/navigation.ts` - Sidebar menu items
+- `components/layout/topbar.tsx` - Bell notification icon
+
 ## Development Notes
 
 - Mock data di `mocks/data/` - siap integrasi API real

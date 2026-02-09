@@ -16,7 +16,7 @@ export interface Topic {
     createdAt: string
     updatedAt: string
     mentionCount: number
-    lastCrawledAt: string
+    lastCrawledAt: string  // Data di-refresh setiap 24 jam
 }
 
 // User

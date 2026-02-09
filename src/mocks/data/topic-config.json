@@ -5,6 +5,7 @@
   "status": "active",
   "createdAt": "2024-01-01T00:00:00Z",
   "updatedAt": "2024-01-28T10:30:00Z",
+  "lastCrawledAt": "2024-01-28T10:30:00Z",
   "keywords": {
     "primary": ["Brand X", "BrandX", "@brandx", "#brandx"],
     "mustContain": ["review", "keluhan", "complaint"],
@@ -19,15 +20,5 @@
     "threads": true,
     "newsPortal": true,
     "googleNews": true
-  },
-  "schedule": {
-    "frequency": "15min",
-    "lastCrawl": "2024-01-28T10:30:00Z",
-    "nextCrawl": "2024-01-28T10:45:00Z"
-  },
-  "filters": {
-    "languages": ["id", "en"],
-    "minEngagement": 0,
-    "botFiltering": "exclude_high"
   }
 }

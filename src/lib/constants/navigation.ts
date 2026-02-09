@@ -14,8 +14,9 @@ import {
     FileBarChart,
     Settings,
     UserCog,
-    Bell,
-    Key,
+    // Hidden for now - will be enabled later
+    // Bell,
+    // Key,
 } from 'lucide-react'
 
 export const sidebarNavigation = [
@@ -107,16 +108,17 @@ export const sidebarNavigation = [
                 href: '/settings/team',
                 icon: UserCog,
             },
-            {
-                title: 'Notifications',
-                href: '/settings/notifications',
-                icon: Bell,
-            },
-            {
-                title: 'API Keys',
-                href: '/settings/api-keys',
-                icon: Key,
-            },
+            // Hidden for now - will be enabled later
+            // {
+            //     title: 'Notifications',
+            //     href: '/settings/notifications',
+            //     icon: Bell,
+            // },
+            // {
+            //     title: 'API Keys',
+            //     href: '/settings/api-keys',
+            //     icon: Key,
+            // },
         ],
     },
 ]
