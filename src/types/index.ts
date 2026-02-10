@@ -1,95 +1,171 @@
-// Platform types
-export type Platform = 'twitter' | 'instagram' | 'tiktok' | 'youtube' | 'facebook' | 'threads' | 'news'
+// Re-export all types from shared package
+export type {
+  // Core types
+  Platform,
+  PlatformConfig,
+  PlatformInfo,
+  Sentiment,
+  Emotion,
+  SentimentBreakdown,
+  SentimentResult,
+  EmotionResult,
+  EmotionInfo,
+  User,
+  UserRole,
+  TeamMember,
+  RolePermission,
+  Province,
+  MentionLocation,
+  Entity,
+  EntityType,
+  Influencer,
+  InfluencerType,
+  InfluencerPost,
+  GenderDistribution,
+  AgeGroup,
 
-// Sentiment types
-export type Sentiment = 'positive' | 'neutral' | 'negative'
+  // Domain types
+  Topic,
+  TopicStatus,
+  TopicConfig,
+  KeywordConfig,
+  Mention,
+  MentionAuthor,
+  MentionEngagement,
+  MentionCluster,
+  MentionClusterType,
+  StatValue,
+  OverviewStats as SharedOverviewStats,
+  MentionTrendPoint,
+  PlatformDistribution,
+  WordData,
+  TrendAnomaly,
+  TrendAnomalyRootCause,
+  HeatmapData,
+  PeakActivity,
+  PeriodMetrics,
+  TrendOverlayData,
+  PlatformComparisonData,
+  ComparisonInsight,
+  Insight,
+  InsightType,
+  TopicCluster,
+  CoOccurrence,
+  KeywordTrendData,
+  ContentItem,
+  ContentType,
+  CompetitorData,
+  ProvinceData as SharedProvinceData,
 
-// Emotion types
-export type Emotion = 'joy' | 'anger' | 'sadness' | 'fear' | 'surprise' | 'disgust' | 'neutral'
+  // API types
+  ExportFormat,
+  ExportRequest,
+  ExportStatus,
+  AlertMetric,
+  AlertCondition,
+  TimeWindow,
+  AlertTrigger,
+  AlertChannels,
+  AlertOptions,
+  AlertConfig,
+  WebhookEvent,
+  Webhook,
+  WebhookEventInfo,
+  ApiKeyPermission,
+  ApiKey,
+  CreateApiKeyRequest,
+  CreateApiKeyResponse,
+  BotRiskLevel,
+  BotAccount,
+  BotScoreDistribution,
+  BotRiskSummary,
+  NetworkNode,
+  NetworkLink,
+  ClusterAnalysis,
+  NotificationChannelType,
+  NotificationChannel,
+  EmailScheduleType,
+  EmailSchedule,
+} from '@asha/shared'
 
-// Topic/Project
-export interface Topic {
-    id: string
-    name: string
-    description: string
-    status: 'active' | 'paused' | 'archived'
-    createdAt: string
-    updatedAt: string
-    mentionCount: number
-    lastCrawledAt: string  // Data di-refresh setiap 24 jam
-}
+// =============================================================================
+// Frontend-specific types / backward compatibility aliases
+// =============================================================================
 
-// User
-export interface User {
-    id: string
-    email: string
-    name: string
-    avatar?: string
-    role: 'owner' | 'admin' | 'analyst' | 'viewer'
-}
+import type { Sentiment, StatValue, MentionTrendPoint } from '@asha/shared'
 
-// Mention
-export interface Mention {
-    id: string
-    content: string
-    platform: Platform
-    author: {
-        id: string
-        username: string
-        displayName: string
-        avatarUrl?: string
-        followers: number
-        isVerified: boolean
-        botScore: number
-    }
-    engagement: {
-        likes: number
-        comments: number
-        shares: number
-        views?: number
-    }
-    sentiment: {
-        auto: Sentiment
-        autoScore: number
-        manual?: Sentiment
-    }
-    emotion: {
-        primary: Emotion
-        score: number
-    }
-    location?: {
-        provinceId: string
-        provinceName: string
-    }
-    originalUrl: string
-    createdAt: string
-}
-
-// Stats
+/**
+ * Simple overview stats (legacy format for simpler components)
+ * Use SharedOverviewStats for full StatValue structure
+ */
 export interface OverviewStats {
-    totalMentions: number
-    mentionChange: number
-    reach: number
-    reachChange: number
-    sentimentScore: number
-    sentimentChange: number
-    viralityIndex: number
-    viralityChange: number
+  totalMentions: number
+  mentionChange: number
+  reach: number
+  reachChange: number
+  sentimentScore: number
+  sentimentChange: number
+  viralityIndex: number
+  viralityChange: number
 }
 
-// Time series
+/**
+ * Simple time series point (legacy format)
+ * Use MentionTrendPoint for full structure
+ */
 export interface TimeSeriesPoint {
-    date: string
-    value: number
-    positive?: number
-    neutral?: number
-    negative?: number
+  date: string
+  value: number
+  positive?: number
+  neutral?: number
+  negative?: number
 }
 
-// Province data
+/**
+ * Simple province data for maps (legacy format)
+ * Use SharedProvinceData for full analytics structure
+ */
 export interface ProvinceData {
-    id: string
-    name: string
-    value: number
-    sentiment: Sentiment
+  id: string
+  name: string
+  value: number
+  sentiment: Sentiment
+}
+
+// =============================================================================
+// Helper functions to convert between formats
+// =============================================================================
+
+/**
+ * Convert StatValue to simple number + change format
+ */
+export function toSimpleStats(stats: {
+  totalMentions: StatValue
+  reach: StatValue
+  sentimentScore: StatValue
+  viralityIndex: StatValue
+}): OverviewStats {
+  return {
+    totalMentions: stats.totalMentions.value,
+    mentionChange: stats.totalMentions.change,
+    reach: stats.reach.value,
+    reachChange: stats.reach.change,
+    sentimentScore: stats.sentimentScore.value,
+    sentimentChange: stats.sentimentScore.change,
+    viralityIndex: stats.viralityIndex.value,
+    viralityChange: stats.viralityIndex.change,
+  }
+}
+
+/**
+ * Convert MentionTrendPoint to TimeSeriesPoint
+ */
+export function toTimeSeriesPoint(point: MentionTrendPoint): TimeSeriesPoint {
+  return {
+    date: point.date,
+    value: point.total ?? point.positive + point.neutral + point.negative,
+    positive: point.positive,
+    neutral: point.neutral,
+    negative: point.negative,
+  }
 }
